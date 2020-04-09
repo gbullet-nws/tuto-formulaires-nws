@@ -26,10 +26,12 @@ function validerFormulaire() {
     if (!validerMessage()){
         return false;
     }
+
     // vous pouvez insérer d'autres éléments de validation ici
     if (!validerTelephone()) {
         return false;
     }
+
     // si aucune erreur n'a été trouvée, on arrive ici
     return true;
 }
@@ -98,6 +100,7 @@ function verifierCaracteresInterdits(chaine){
     }
     return true;
 };
+
 // validation du numéro de téléphone
 function verifierNumeroTelephone(chaine){
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
