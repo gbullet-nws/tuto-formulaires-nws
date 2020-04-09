@@ -49,24 +49,9 @@ function validerNom() {
         return true;
     }
 }
-// fonction de validation de l'email
-function validerMail() {
-    var mail = document.querySelector("#mail").value;
-    var taille_mini_nom=3
-    if (!verifierTaille(nom, taille_mini_nom)){
-        alert(`le nom doit contenir au moins ${taille_mini_nom} caractères`);
-        return false;
-    } else if (!verifierCaracteresInterdits(nom)) {
-        // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits
-        alert(`le nom ne peut pas contenir de caractères interdits`);
-        return false;
-    } else {
-        return true;
-    }
-}
 // fonction de validation du numéro de téléphone
 function validerTelephone() {
-    var telephone = document.querySelector("#tel").value;
+    var telephone = document.querySelector("#phone").value;
     var taille_mini_tel=10
     var taille_max_tel=10
     if (!verifierTaille(telephone, taille_mini_tel, taille_max_tel)){
@@ -85,7 +70,7 @@ function validerTelephone() {
 function validerMessage(){
     var message = document.querySelector("#msg").value; 
     if (!verifierCaracteresInterdits(message)) {
-        alert(`le message ne peut pas contenir de caractères interdits`);
+        alert(`Le message ne peut pas contenir de caractères interdits`);
         return false;
     } else {
         return true;
