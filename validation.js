@@ -27,7 +27,9 @@ function validerFormulaire() {
         return false;
     }
     // vous pouvez insérer d'autres éléments de validation ici
-
+    if (!validerTelephone()) {
+        return false;
+    }
     // si aucune erreur n'a été trouvée, on arrive ici
     return true;
 }
@@ -42,6 +44,37 @@ function validerNom() {
     } else if (!verifierCaracteresInterdits(nom)) {
         // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits
         alert(`le nom ne peut pas contenir de caractères interdits`);
+        return false;
+    } else {
+        return true;
+    }
+}
+// fonction de validation de l'email
+function validerMail() {
+    var mail = document.querySelector("#mail").value;
+    var taille_mini_nom=3
+    if (!verifierTaille(nom, taille_mini_nom)){
+        alert(`le nom doit contenir au moins ${taille_mini_nom} caractères`);
+        return false;
+    } else if (!verifierCaracteresInterdits(nom)) {
+        // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits
+        alert(`le nom ne peut pas contenir de caractères interdits`);
+        return false;
+    } else {
+        return true;
+    }
+}
+// fonction de validation du numéro de téléphone
+function validerTelephone() {
+    var telephone = document.querySelector("#tel").value;
+    var taille_mini_tel=10
+    var taille_max_tel=10
+    if (!verifierTaille(telephone, taille_mini_tel, taille_max_tel)){
+        alert(`Le numéro doit contenir ${taille_mini_tel} caractères`);
+        return false;
+    } else if (!verifierNumeroTelephone(telephone)) {
+        // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits
+        alert(`Le numéro ne doit contenir que des chiffres`);
         return false;
     } else {
         return true;
@@ -76,6 +109,14 @@ function verifierTaille(chaine, taille_mini_chaine) {
 function verifierCaracteresInterdits(chaine){
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
     if(/^[a-zA-Z0-9 ']*$/.test(chaine) == false){
+        return false;
+    }
+    return true;
+};
+// validation du numéro de téléphone
+function verifierNumeroTelephone(chaine){
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+    if(/^[0-9 ']*$/.test(chaine) == false){
         return false;
     }
     return true;
