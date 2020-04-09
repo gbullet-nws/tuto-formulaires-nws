@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
     }, false);
+    
 });
 
 // fonction globale de validation du formulaire
