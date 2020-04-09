@@ -5,25 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Un premier formulaire</title>
+    <title>Formulaire peu scrupuleux</title>
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
 </head>
 
 <body>
-    <h1>Un formulaire pour en savoir plus </h1>
+    <h1>Un formulaire de récolte de données </h1>
 
     <article>
         <h2>Pourquoi ce formulaire ?</h2>
-        <p> Grâce à nos stratèges "Inbound marketing", vous avez activé un "Call To Action" et êtes prêt(e) à nous communiquer vos coordonnées. Ce formulaire est pour vous.</p>
+        <p> Prendre vos informations et les revendre ensuite à des entreprises tierses.</p>
         <form class="pure-form pure-form-aligned" action="/ma-page-de-traitement" method="post">
-                <div class="pure-control-group">
-                    <label for="name">Nom :</label>
+            <div class="pure-control-group">
+                <label for="name">Nom :</label>
                 <input type="text" id="name" name="user_name">
             </div>
             <div class="pure-control-group">
                 <label for="mail">e-mail :</label>
                 <input type="email" id="mail" name="user_mail">
+            </div>
+            <div class="pure-control-group">
+                <label for="tel"> Téléphone :</label>
+                <input id="tel" name="user_phone"></input>
             </div>
             <div class="pure-control-group">
                 <label for="msg">Message :</label>
