@@ -1,0 +1,15 @@
+body {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+body > article > form > fieldset > ul {
+    list-style: none;
+}
+body > article > form > legend {
+    font-size: 14px;
+}
+body > article > form > div > label.pure-checkbox {
+    text-align: justify;
+    font-size: 14px;
+}
