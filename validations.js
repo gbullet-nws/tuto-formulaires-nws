@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
     }, false);
-    
+
 });
 
 // fonction globale de validation du formulaire
@@ -23,16 +23,12 @@ function validerFormulaire() {
     if (!validerNom()) {
         return false;
     }
-
-    if (!validerMessage()){
-        return false;
-    }
-
-    // vous pouvez insérer d'autres éléments de validation ici
     if (!validerTelephone()) {
         return false;
     }
-
+    if (!validerMessage()){
+        return false;
+    }
     // si aucune erreur n'a été trouvée, on arrive ici
     return true;
 }
@@ -80,11 +76,15 @@ function validerMessage(){
     }
 }
 
-// la chaine doivent avoir une taille d'au moins la taille fournie
-function verifierTaille(chaine, taille_mini_chaine) {
+// les chaines doivent avoir une taille minimale ou maximale selon le champs
+function verifierTaille(chaine, taille_mini_chaine, taille_max_chaine) {
     if (chaine.length < taille_mini_chaine) {
         return false;
-    }else{
+    }
+    else if (chaine.length > taille_max_chaine) {
+        return false;
+    }
+    else{
         return true;
     }
 }
@@ -104,7 +104,6 @@ function verifierCaracteresInterdits(chaine){
 
 // validation du numéro de téléphone
 function verifierNumeroTelephone(chaine){
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
     if(/^[0-9 ']*$/.test(chaine) == false){
         return false;
     }

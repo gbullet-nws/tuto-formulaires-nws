@@ -11,25 +11,44 @@
 </head>
 
 <body>
-    <h1>Un formulaire de récolte de données </h1>
+    <h1>Un formulaire de récolte de données personnelles</h1>
 
     <article>
 
         <h2>Pourquoi ce formulaire ?</h2>
-        <p> Prendre vos informations et les revendre ensuite à des entreprises tierses.</p>
+        <p> Ce que nous recherchons par-dessus tout c'est le profit. Donc, du à la conjoncture
+            économique actuelle et notre manque de créativité. Nous avons mis au point ce formulaire
+            afin de prendre vos informations personnelles et de les revendre par la suite à des 
+            entreprises tierses basées en Chine et inattaquables en justice.</p>
 
         <form class="pure-form pure-form-aligned" action="/ma-page-de-traitement" method="post">
+            <fieldset class="pure-controls" >
+                <ul>
+                    <li>
+                      <label for="monsieur">
+                        <input type="radio" id="monsieur" name="titre" value="M." >
+                        Monsieur
+                      </label>
+                    </li>
+                    <li>
+                      <label for="madame">
+                        <input type="radio" id="madame" name="titre" value="Mme.">
+                        Madame
+                      </label>
+                    </li>
+                </ul>
+              </fieldset>
             <div class="pure-control-group">
                 <label for="name">Nom :</label>
-                <input type="text" id="name" name="user_name">
+                <input type="text" placeholder="Adrien Martin" minlength="3" id="name" name="user_name">
             </div>
             <div class="pure-control-group">
                 <label for="mail">e-mail :</label>
-                <input type="email" id="mail" name="user_mail">
+                <input type="email" placeholder="exemple@mail.com" id="mail" name="user_mail">
             </div>
             <div class="pure-control-group">
                 <label for="phone"> Téléphone :</label>
-                <input type="tel" id="phone" name="user_phone"></input>
+                <input type="tel" placeholder="0633224455 / +33633224455" minlength="10" maxlength="12" id="phone" name="user_phone"></input>
             </div>
             <div class="pure-control-group">
                 <label for="msg">Message :</label>
@@ -37,7 +56,9 @@
             </div>
             <div class="pure-controls">
                 <label for="cb" class="pure-checkbox">
-                    <input id="cb" type="checkbox"> J'accepte que mes informations servent à me spammer
+                    <input id="cb" type="checkbox"> J'accepte que mes informations servent 
+                    à enrichir des flemmards en manque de créativité. Et avec le sourire 
+                    nous vous prions.
                 </label>
                 <button id="envoi" type="submit" class="pure-button pure-button-primary"> Envoyer </button>
             </div>
