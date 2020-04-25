@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onUnload='au_revoir()'>
     <h1>Un formulaire de récolte de données personnelles</h1>
 
     <article>
@@ -42,6 +42,7 @@
             <div class="pure-control-group">
                 <label for="name">Nom : <strong title="required"> * </strong> </label>
                 <input type="text" placeholder="Adrien Martin" minlength="3" id="name" name="user_name">
+                <div id="#remplissage-nom"> Votre Nom et Prénom doivent comporter au moins 3 caractères et ne doivent pas contenir de caractères spéciaux : /$("§! </p>
             </div>
             <div class="pure-control-group">
                 <label for="mail">E-mail : <strong title="required"> * </strong> </label>
@@ -49,7 +50,7 @@
             </div>
             <div class="pure-control-group">
                 <label for="phone"> Téléphone : <strong title="required"> * </strong> </label>
-                <input type="tel" placeholder="0633224455 / +33633224455" minlength="10" maxlength="12" id="phone" name="user_phone"></input>
+                <input type="tel" placeholder="0633224455 / +33612345678" minlength="10" maxlength="12" id="phone" name="user_phone"></input>
             </div>
             <div class="pure-control-group">
                 <label for="msg">Message :</label>
@@ -61,7 +62,9 @@
                 </label>
                 <button id="envoi" type="submit" class="pure-button pure-button-primary"> Envoyer </button>
             </div> <br> 
-            <br> <legend> <br> Les champs comportants la mention * , sont requis pour envoyer le formulaire.</legend>
+            <br> <legend> <br> Les champs comportants la mention * , sont requis afin de pouvoir envoyer le formulaire.</legend>
+
+           <!-- <div> Erreurs lors du remplissage du formulaires </div> -->
 
         </form>
 

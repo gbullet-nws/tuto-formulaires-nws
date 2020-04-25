@@ -1,6 +1,6 @@
 body {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 body > article > form > fieldset > ul {
@@ -12,4 +12,8 @@ body > article > form > legend {
 body > article > form > div > label.pure-checkbox {
     text-align: justify;
     font-size: 14px;
+}
+.msg-alert {
+    text-align: center;
+    display: none;
 }

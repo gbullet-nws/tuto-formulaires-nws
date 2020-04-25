@@ -13,9 +13,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             alert("Le formulaire est correct, on envoie au serveur !");
             document.querySelector("#formulaire").submit();
         }
-
-    }, false);
-
+    }, 
+    false);
 });
 
 // fonction globale de validation du formulaire
@@ -104,8 +103,19 @@ function verifierCaracteresInterdits(chaine){
 
 // validation du numéro de téléphone
 function verifierNumeroTelephone(chaine){
-    if(/^[0-9 ']*$/.test(chaine) == false){
+    if(/^[0-9 +]*$/.test(chaine) == false){
         return false;
     }
     return true;
 };
+
+//Apparition du texte contenant les indications de remplissage
+//function apparitionInfosRemplissage() {
+//    var infos = document.querySelector(".msg-remplissage").value;
+//
+//};
+
+// fonction qui appelle une alerte si on quitte la page
+var msg1 = document.getElementById('#remplissage-nom'); 
+msg1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+
